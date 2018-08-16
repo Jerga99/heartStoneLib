@@ -1,0 +1,7 @@
+{
+  "name": "heartStoneLib",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
