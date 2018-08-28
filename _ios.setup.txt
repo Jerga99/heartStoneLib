@@ -1,0 +1,24 @@
+1. Create App in IOS FIREBASE
+
+2. Go to XCODE -> Capatibilities -> enable push notification and game center
+
+3. Go to apple developer account of IOS -> go to “Certificates, IDs & Profiles” -> APP IDS -> enable push notification
+
+4. Create certificate
+  Keychain Access > Certificate Assistant > Request a Certificate from a Certificate Authority.
+  In the User Email Address field, enter your email address.
+  In the Common Name field, create a name for your private key (e.g., John Doe Dev Key).
+  The CA Email Address field should be left empty.
+  In the "Request is" group, select the "Saved to disk" option.
+
+5. In developer Console -> Select All under Keys on the left menu -> Click plus to add a key and name it -> check APNs then click continue -> Click Confirm. Download the file, copy the key, and click done..
+
+6. Go back to your Firebase Settings -> Cloud Messaging tab -> Go down to your iOS app configuration and under -> “APNs Authentication Key” click upload -> Upload the .p8 file Apple just gave you.
+
+7. Paste the Key in the “Key ID” field. Go back to the apple developer page. Open App IDs under Identifiers on the left menu. Select the appropriate app and copy the Prefix. Paste it where Firebase is asking for it. Then click upload.
+
+
+
+
+
+

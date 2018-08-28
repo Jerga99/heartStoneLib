@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Favorite Cards</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item [href]="'/tabs/(card:card/' + card.cardId + ')'" *ngFor="let card of favoriteCardList">
+      <ion-label>
+        <h2> {{card.name}} </h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

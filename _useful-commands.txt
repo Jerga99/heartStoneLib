@@ -1,0 +1,19 @@
+//// Generate resources //////
+1. Run "ionic cordova resources" from CLI
+
+//// Run App //////
+2. Run App in broser (clasic setup) -> ionic serve
+
+3. Run App in broser (lab setup) -> ionic serve --lab
+
+4. Run App in browser with Ionic plugins -> ionic cordova run browser
+
+//// Emulate App //////
+4. Ios -> ionic cordova emulate ios
+
+5. Android -> ionic cordova emulate android
+
+//// Build App //////
+4. Ios -> ionic cordova build ios
+
+5. Android -> ionic cordova build android

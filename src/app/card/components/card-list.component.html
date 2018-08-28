@@ -1,0 +1,14 @@
+<ion-list *ngIf="items.length > 0">
+  <ion-list-header>
+    <ion-label>{{listName}}</ion-label>
+  </ion-list-header>
+  <ion-item [href]="navigateTo(listName, item)" *ngFor="let item of items">
+    <ion-avatar slot="start">
+      <img [src]="'assets/image/' + item + '.png'">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{item}}</h2>
+      <app-card-list> </app-card-list>
+    </ion-label>
+  </ion-item>
+</ion-list>

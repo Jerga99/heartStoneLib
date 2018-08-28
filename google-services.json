@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "400594279050",
+    "firebase_url": "https://test-hero-24d99.firebaseio.com",
+    "project_id": "test-hero-24d99",
+    "storage_bucket": "test-hero-24d99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400594279050:android:b29d39eb4ab16d4a",
+        "android_client_info": {
+          "package_name": "com.filipjerga.heartstonelib"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400594279050-e2tjl0oictgmp1rhpk192rq6qpfrt6hq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgvx4VX7rkFuEWRdakzDmktcSVVbtgX4Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

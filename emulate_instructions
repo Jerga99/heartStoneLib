@@ -1,0 +1,54 @@
+
+-------------- MAC -------------------
+
+######### IOS ###########
+1. Install Xcode - get it for free from App Store
+   -> it will ask you to accept licence in terminal, just follow instruction and type accept
+
+2. ionic cordova emulate ios --livereload
+
+######### ANDROID ###########
+1. Download and install android studtio
+
+2. We need to install gradle - (gradle is system to help you build your code for emulator)
+
+3. brew install gradle
+    -> if you don't have homebrew go to official website https://brew.sh/ and copy command for installation
+
+4. Run you Android studio and create empty project in order to install all of the, updates, SDKs and packages.
+
+5. Create new virtual device in tools/VD
+
+6. All done (:
+
+7. ionic cordova emulate android --livereload
+
+-------------- WINDOWS -------------------
+
+######### IOS ###########
+1. Cannot run because Xcode is not available for windows :(
+
+######### ANDROID ###########
+1. Download and install android studtio
+
+2. Download latest gradle binary - https://gradle.org/releases/
+
+3. Create a new directory C:\Gradle with File Explorer. -> or directory of your choice
+
+4. Unpack your downloaded gradle binary to C:\Gradle
+
+5. In File Explorer right-click on the This PC (or Computer) icon, then click Properties -> Advanced System Settings -> Environmental Variables.
+
+6. Under System Variables select Path, then click Edit. Add an entry for C:\Gradle\gradle-4.9\bin. Click OK to save.
+  -> Image Tutorial: https://www.computerhope.com/issues/ch000549.htm
+
+7. Open a console (or a Windows command prompt) and run gradle -v to run gradle and display the version, e.g.:
+
+8. Run you Android studio and create empty project in order to install all of the, updates, SDKs and packages.
+
+9. Create new virtual device in tools/VD
+
+10. All done (:
+
+11. ionic cordova emulate android --livereload
+

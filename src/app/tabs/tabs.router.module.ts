@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
-import { HomePage } from '../home/home.page';
-import { AboutPage } from '../about/about.page';
-import { ContactPage } from '../contact/contact.page';
+import { CardDeckPage } from '../card/card-deck/card-deck.page';
+import { CardListingPage } from '../card/card-listing/card-listing.page';
+import { CardDetailPage } from '../card/card-detail/card-detail.page';
+import { CardFavoritePage } from '../card/card-favorite/card-favorite.page';
 
 const routes: Routes = [
   {
@@ -12,25 +13,30 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'home',
-        outlet: 'home',
-        component: HomePage
+        path: 'favorite',
+        outlet: 'favorite',
+        component: CardFavoritePage
       },
       {
-        path: 'about',
-        outlet: 'about',
-        component: AboutPage
+        path: 'card',
+        outlet: 'card',
+        component: CardDeckPage
       },
       {
-        path: 'contact',
-        outlet: 'contact',
-        component: ContactPage
+        path: 'card/:cardId',
+        outlet: 'card',
+        component: CardDetailPage
+      },
+      {
+        path: 'card/:cardDeckGroup/:cardDeck',
+        outlet: 'card',
+        component: CardListingPage
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/(home:home)',
+    redirectTo: '/tabs/(card:card)',
     pathMatch: 'full'
   }
 ];

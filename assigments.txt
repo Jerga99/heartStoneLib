@@ -1,0 +1,96 @@
+
+
+############### Assigment 1 #################
+1. Generate or create CardDetailPage in  card/card-detail
+    -> only html(card-detail.page.html) and ts(card-detail.page.ts) file will be enough for now
+NOTE: Do not forget to import CardDetailPage to card module
+
+2. Create Routing to detail page with path of card/:cardId and outlet of "card"
+
+3. Create navigation to CardDetailPage
+    -> make [href] on button in card-listing page with path = "'/tabs/(card:card/' + card.cardId + ')'"
+
+4. Test your navigation to detail page
+
+5. In detail page get cardlId from ActivedRoute
+
+6. Create new function in service to get card by id
+    -> GET request to: `${this.HS_API_URL}/cards/${cardId}`
+
+7. In card detail page call newly created function and subscribe to it (in ionViewWillEnter)
+    -> response in this case is weird you will receive back array with 1 element so you need to
+       write something like this in: this.card = card[0]
+
+8. Now just play with HTML and display card details on the screen
+    -> you can display: img, name, text, flavor, health, attack, faction, rarity, type
+
+NOTE: To make sure you are display content when it's ready write *ngIf="card.cardId" on ion-content
+WARNING: not all of the properties are on every card, so you need to write *ngIf check or
+         you need to use safe operator, e.g {{card?.type}} this will make sure if property
+         is undefined it will not throw error
+
+
+##### OPTIONAL For Master Coders :D #####
+  1. image link is not always working, we need to set some fallback image.
+      You can check for error link like this: <img [src]="card.img" (error)="updateImage($event)"/>
+      inside updateImage you can assign new image to our card.img
+  NOTE: I included fallback image in assets folder, it's called: "DefaulCard.png"
+
+Good Luck, Have fun (:
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+############### Assigment 2 #################
+1. Study Ionic Documentation of Alert
+
+2. Create alert.service.ts in shared/service folder - similiar service as toast service
+
+3. In service implement function to display alert of your choice
+
+4. Provide AlertService to card.module.ts
+
+5. Inject service to CardDetailPage
+
+6. Call you alert function in success callback of getCardById and test it out in application!
+
+Good Luck, Have fun (:
+
+
+
+############### Assigment 3 ################# Advanced Assigment
+
+1. Create new page in "card/card-favorite" with name CardFavoritePage
+   -> don't forget to provide it to card.module
+
+2. Create routing to favorite card page
+   -> create new route with path of "favorite" and outlet of "favorite"
+   -> create new outlet in HTML or change current contact outlet
+   -> change name of outlet and choose icon of your choice
+
+3. Test your new navigation to favorite card page, you can display just some H1 on screen
+
+4. Inside of your favorite card page  inject your favorite card store
+
+5. subscribe to favorite cards same as in our card listing page
+
+6. Don't forget we are receiving our favorite cards as a object so we need to transform it to array
+
+  HINT: You can use function that will transform object from storage to card array.
+    getFavoriteCardList(favoriteCards: any): Card[] {
+      if (favoriteCards) {
+        return Object.keys(favoriteCards)
+          .filter(key => favoriteCards[key])
+          .map(key => favoriteCards[key])
+      }
+
+      return [];
+    }
+
+7. Get a break now and compare your code with me.
+
+8. Let's finish template html file as you like it. You can display classical list or Card like styling as in a listing page, it's up to you. You can share your favorite card page with me.
+
+Good Luck, Have fun (:
+
+
