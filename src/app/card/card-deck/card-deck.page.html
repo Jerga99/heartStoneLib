@@ -7,7 +7,6 @@
 </ion-header>
 
 <ion-content>
-  <ion-button [href]="'/rentals'"> Navigate Away </ion-button>
   <app-card-list *ngFor="let cardDeck of cardDecks"
                  [items]="cardDeck.types"
                  [listName]="cardDeck.name"
